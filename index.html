@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おもいでコンシェルジュ</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock">
+        <div class="clock-date"></div>
+        <div class="clock-time"></div>
+      </div>
+      <div class="p2p-media">
+        <div id="my-stream" class="my-stream-normal">
+          <video id="my-video" class="my-video-normal turning" autoplay muted playsinline></video>
+        </div>
+        <div id="your-stream" class="your-stream-normal">
+          <video id="your-video" class="your-video-normal turning" autoplay muted playsinline></video>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="mainmenu">
+          <input id="shutter"   type="image" src="shutter.png"   alt="おもいで撮影"></input>
+          <input id="checkok"   type="image" src="checkok.png"   alt="撮影確認終了"></input>
+          <input id="mutedoff"  type="image" src="mutedoff.png"  alt="マイク切替"></input>
+          <input id="mutedon"   type="image" src="mutedon.png"   alt="マイク切替"></input>
+          <input id="switching" type="image" src="switching.png" alt="画面切替"></input>
+          <input id="delivery"  type="image" src="delivery.png"  alt="料理注文"></input>
+        </div>
+        <div class="mymenu">
+          <p>あなたのIDは：</p>
+          <input type="text" id="my-id"></input>
+          <button id="id-open">設定</button>
+          <button id="id-close">切断</button>
+        </div>
+        <div class="yourmenu">
+          <p>通信したい相手のIDを入力してください：</p>
+          <input type="text" id="your-id"></input>
+          <button id="make-call">発信</button>
+        </div>
+        <div class="AImenu">
+          <input id="sasetaruchan" type="image" src="sasetaruchan.png" alt="会話続けさせたるちゃん"></input>
+          <div class="balloon">
+            <p id="AItxt">会話に困ったらわたしをクリックしてね！</p>
+          </div>
+        </div>
+      </div>
+      <div class="photo-check">
+        <canvas id="my-photo" class="turning"></canvas>
+        <canvas id="your-photo" class="turning"></canvas>
+      </div>
+      <iframe src="https://www.nttd-fr.com/" id="delivery-site" class="delivery-none"></iframe>
+    </div>
+    <script src="https://cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
