@@ -143,6 +143,7 @@ video {
   right: 0;
   z-index: 2;
   width: 50vw;
+  display: flex;
 }
 
 #my-photo, #your-photo {
